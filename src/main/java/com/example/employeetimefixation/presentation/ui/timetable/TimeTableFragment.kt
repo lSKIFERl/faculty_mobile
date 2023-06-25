@@ -16,7 +16,7 @@ import com.example.employeetimefixation.presentation.ui.details.EmployeeDetailFr
 import com.example.employeetimefixation.presentation.ui.timetable.holders.tablelist.TableListHolderAdapter
 import com.example.employeetimefixation.presentation.util.SortType
 
-class TimeTableFragment : Fragment() {
+class TimeTableFragment : Fragment(R.layout.fragment_time_table) {
 
     private lateinit var timeTableViewModel: TimeTableViewModel
     private lateinit var binding: FragmentTimeTableBinding
@@ -100,5 +100,15 @@ class TimeTableFragment : Fragment() {
         timeTableViewModel.employeeList.observe(viewLifecycleOwner, {
             tableListAdapter.setList(it)
         })
+    }
+
+    private fun TextView.clickAndSort(sortType: SortType) {
+        setOnClickListener { it as TextView
+            when(tableListAdapter.sortListBy(sortType)) {
+                1 -> it.setIcon(R.drawable.ic_twotone_arrow_drop_down_24)
+                2 -> it.setIcon(R.drawable.ic_baseline_arrow_drop_up_24)
+                else -> it.setIcon(R.drawable.ic_empty)
+            }
+        }
     }
 }
