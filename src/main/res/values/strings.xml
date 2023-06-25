@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">EmployeeTimeFixation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Учёт рабочего времени</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="time_table">Расписание</string>
+    <string name="notifications">Уведомления</string>
+    <string name="productivity">График производительности</string>
+
+    <string name="settings">Настройки</string>
+
+    <string name="primary_info">%d %s %s</string>
+    <string name="additional_info_candidate">До %s (Осталось: %s)</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="settings_title">Настройки</string>
+</resources>

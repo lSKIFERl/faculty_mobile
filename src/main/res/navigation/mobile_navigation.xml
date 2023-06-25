@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    android:label="@string/time_table"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.employeetimefixation.presentation.ui.timetable.TimeTableFragment"
+        android:label="@string/time_table"
+        tools:layout="@layout/fragment_time_table">
+        <action
+            android:id="@+id/action_nav_home_to_employeeDetailFragment2"
+            app:destination="@id/nav_employee_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.employeetimefixation.presentation.ui.notifications.NotificationsFragment"
+        android:label="@string/notifications"
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/action_nav_gallery_to_nav_employee_details"
+            app:destination="@id/nav_employee_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.employeetimefixation.presentation.ui.productivity.ProductivityFragment"
+        android:label="@string/productivity"
+        tools:layout="@layout/fragment_productivity" />
+    <fragment
+        android:id="@+id/nav_employee_details"
+        android:name="com.example.employeetimefixation.presentation.ui.details.EmployeeDetailFragment"
+        tools:layout="@layout/fragment_employee_detail" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.employeetimefixation.presentation.ui.settings.SettingsFragment"
+        android:label="@string/settings_title" />
+</navigation>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@drawable/bg_rounded_view"
+    android:backgroundTint="@color/orange_second"
+    android:layout_marginVertical="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notification_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_primary_info_candidate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="?attr/actionBarSize"
+                android:padding="8dp"
+                android:textColor="@color/design_default_color_on_primary"
+                app:layout_constraintBottom_toTopOf="@+id/end_work"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="197 Роман DT" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_view"
+                android:backgroundTint="@color/orange_second"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_additional_info_candidate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/design_default_color_on_primary"
+                    tools:text="До 18:00 (осталось 02:15)" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/brake_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                        android:checkMarkTint="@color/design_default_color_on_primary"
+                        android:drawableTint="@color/design_default_color_on_primary"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="30:"
+                        android:textColor="@color/design_default_color_on_primary" />
+
+                    <CheckedTextView
+                        android:id="@+id/brake_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                        android:checkMarkTint="@color/design_default_color_on_primary"
+                        android:drawableTint="@color/design_default_color_on_primary"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="15:"
+                        android:textColor="@color/design_default_color_on_primary" />
+
+                    <CheckedTextView
+                        android:id="@+id/brake_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                        android:checkMarkTint="@color/design_default_color_on_primary"
+                        android:drawableTint="@color/design_default_color_on_primary"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="15:"
+                        android:textColor="@color/design_default_color_on_primary" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/brakes_add_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/brake_1_add_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textColor="@color/design_default_color_on_primary" />
+
+                    <TextView
+                        android:id="@+id/brake_2_add_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textColor="@color/design_default_color_on_primary" />
+
+                    <TextView
+                        android:id="@+id/brake_3_add_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textColor="@color/design_default_color_on_primary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <CheckedTextView
+                android:id="@+id/end_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:checkMarkTint="@color/design_default_color_on_primary"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="Завершить смену"
+                android:textColor="@color/design_default_color_on_primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <CheckBox
+            android:id="@+id/btn_expand_item"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:button="@drawable/selector_arrow"
+            android:gravity="center|bottom"
+            android:scaleX="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notification_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
