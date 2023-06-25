@@ -42,6 +42,12 @@ class TableListHolderAdapter: RecyclerView.Adapter<TableListHolder>() {
         item?.let { bind(it) }
     }
 
+    fun sortListBy(sort: SortType): Int {
+        val callCount = sorter.addSortState(sort)
+        replaceList(sorter.sort())
+        return callCount
+    }
+
     private fun replaceList(list: List<TableItemModel>?) {
         items.clear()
         if (list != null) {
@@ -61,5 +67,13 @@ class TableListHolderAdapter: RecyclerView.Adapter<TableListHolder>() {
         sorter = SortingFilter(items)
         notifyDataSetChanged()
         return this
+    }
+
+    fun setItemListener(itemListener: OnItemListener) {
+        itemListener.also { this.itemListener = it }
+    }
+
+    interface OnItemListener {
+        fun onItemClick(item: TableItemModel?)
     }
 }
