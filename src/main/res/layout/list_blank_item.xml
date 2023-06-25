@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    android:background="@drawable/cell_shape"
+    android:divider="@drawable/separator"
+    android:layout_marginBottom="18dp"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="36dp"
+        android:layout_height="match_parent"
+        android:theme="@style/Cell" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:maxLines="2"
+        android:theme="@style/Cell"
+        app:autoSizeTextType="none" />
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:theme="@style/Cell" />
+
+    <TextView
+        android:id="@+id/time_from"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:theme="@style/Cell" />
+
+    <TextView
+        android:id="@+id/time_to"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:theme="@style/Cell" />
+
+    <TextView
+        android:id="@+id/brake"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:theme="@style/Cell" />
+
+</LinearLayout>
